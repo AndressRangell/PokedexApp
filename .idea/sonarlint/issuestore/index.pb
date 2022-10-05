@@ -59,3 +59,23 @@ P
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 @
 app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
+„
+Tapp/src/main/java/com/plcoding/jetpackcomposepokedex/data/models/PokedexListEntry.kt,5/6/562ac91f1937d861d721684bd9138b9be997bf75
+~
+Napp/src/main/java/com/plcoding/jetpackcomposepokedex/data/remote/PokemonApi.kt,2/a/2aa1d03053fb08e1224354fb890424f6f88c0aba
+t
+Dapp/src/main/java/com/plcoding/jetpackcomposepokedex/di/AppModule.kt,5/3/53f2bbdc0195e5149930ae2dfaaca3d6dcb1a9f7
+ˆ
+Xapp/src/main/java/com/plcoding/jetpackcomposepokedex/pokemonlist/PokemonListViewModel.kt,1/7/17e8e39b70bbd9f764ca93098fecb617614d1dcf
+t
+Dapp/src/main/java/com/plcoding/jetpackcomposepokedex/MainActivity.kt,6/7/676dfdb83bd6080fc45efeafc6fdbb1b0830c67a
+z
+Japp/src/main/java/com/plcoding/jetpackcomposepokedex/PokedexApplication.kt,c/e/ce9b0702e6e95d948e6b65c3f841dbc7c73a613b
+Œ
+\app/src/main/java/com/plcoding/jetpackcomposepokedex/pokemondetail/PokemonDetailViewModel.kt,f/4/f476a6af5f298e91ea6469640c79c4bdeab09011
+z
+Japp/src/main/java/com/plcoding/jetpackcomposepokedex/utils/PokemonParse.kt,6/0/6077688be458681b1d6ba11fe775383b15d3fefe
+„
+Tapp/src/main/java/com/plcoding/jetpackcomposepokedex/repository/PokemonRepository.kt,3/0/30a243a2a07bda845c7d4edfcbe240aa0d6e098f
+v
+Fapp/src/main/java/com/plcoding/jetpackcomposepokedex/utils/Resource.kt,f/5/f54a04a24b01cb9639fca90958245cb8b4987464
