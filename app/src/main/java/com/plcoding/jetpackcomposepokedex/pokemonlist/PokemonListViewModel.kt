@@ -40,13 +40,13 @@ class PokemonListViewModel @Inject constructor(
     }
 
     fun searchPokemonList(query: String) {
-        val listToSearch = if(isSearchStarting) {
+        val listToSearch = if (isSearchStarting) {
             pokemonList.value
         } else {
             cachedPokemonList
         }
         viewModelScope.launch(Dispatchers.Default) {
-            if(query.isEmpty()) {
+            if (query.isEmpty()) {
                 pokemonList.value = cachedPokemonList
                 isSearching.value = false
                 isSearchStarting = true
@@ -56,7 +56,7 @@ class PokemonListViewModel @Inject constructor(
                 it.pokemonName.contains(query.trim(), ignoreCase = true) ||
                         it.number.toString() == query.trim()
             }
-            if(isSearchStarting) {
+            if (isSearchStarting) {
                 cachedPokemonList = pokemonList.value
                 isSearchStarting = false
             }
@@ -90,6 +90,7 @@ class PokemonListViewModel @Inject constructor(
                     loadError.value = result.message!!
                     isLoagind.value = false
                 }
+                is Resource.Loagind -> TODO()
             }
         }
     }
