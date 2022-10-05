@@ -5,7 +5,6 @@ import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.capitalize
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.palette.graphics.Palette
@@ -90,7 +89,7 @@ class PokemonListViewModel @Inject constructor(
                     loadError.value = result.message!!
                     isLoagind.value = false
                 }
-                is Resource.Loagind -> TODO()
+                is Resource.Loading -> TODO()
             }
         }
     }

@@ -49,7 +49,7 @@ fun PokemonDetailScreen(
     pokemonImageSize: Dp = 200.dp,
     viewModel: PokemonDetailViewModel = hiltNavGraphViewModel()
 ) {
-    val pokemonInfo = produceState<Resource<Pokemon>>(initialValue = Resource.Loagind()) {
+    val pokemonInfo = produceState<Resource<Pokemon>>(initialValue = Resource.Loading()) {
         value = viewModel.getPokemonInfo(pokemonName)
     }.value
     Box(
@@ -92,7 +92,8 @@ fun PokemonDetailScreen(
         )
         Box(
             contentAlignment = Alignment.TopCenter,
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()
         ) {
             if (pokemonInfo is Resource.Success) {
                 pokemonInfo.data?.sprites?.let {
@@ -120,7 +121,10 @@ fun PokemonDetailTopSection(
         modifier = modifier
             .background(
                 Brush.verticalGradient(
-                    listOf(Color.Black, Color.Transparent)
+                    listOf(
+                        Color.Black,
+                        Color.Transparent
+                    )
                 )
             )
     ) {
@@ -159,7 +163,7 @@ fun PokemonDetailStateWrapper(
                 modifier = modifier
             )
         }
-        is Resource.Loagind -> {
+        is Resource.Loading -> {
             CircularProgressIndicator(
                 color = MaterialTheme.colors.primary,
                 modifier = loadingModifier
@@ -230,13 +234,14 @@ fun PokemonDetailDataSection(
     sectionHeight: Dp = 80.dp
 ) {
     val pokemonWeightInKg = remember {
-        round(pokemonHeight * 100f) / 1000f
+        round(pokemonWeight * 100f) / 1000f
     }
     val pokemonHeightInMeters = remember {
         round(pokemonHeight * 100f) / 1000f
     }
     Row(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
     ) {
         PokemonDetailDataItem(
             dataValue = pokemonWeightInKg,
@@ -268,7 +273,7 @@ fun PokemonDetailDataItem(
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
-        modifier = Modifier
+        modifier = modifier
     ) {
         Icon(painter = dataIcon, contentDescription = null, tint = MaterialTheme.colors.onSurface)
         Spacer(modifier = Modifier.height(8.dp))
